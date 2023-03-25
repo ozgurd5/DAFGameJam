@@ -7,6 +7,15 @@ TagManager:
   - Ground
   - Wall
   - Ceiling
+  - PlayerPos
+  - Sword
+  - FoodCount
+  - HealthCount
+  - SwordCount
+  - Sun
+  - Food
+  - Health
+  - CoinCount
   - NPC
   layers:
   - Default
