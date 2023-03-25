@@ -73,7 +73,6 @@ public class NPCMovement : MonoBehaviour
 
     public void JumpEnder()
     {
-        Debug.Log("yara");
         rb.velocity = new Vector2(rb.velocity.x, 0f);
         state.isJumping = false;
     }
