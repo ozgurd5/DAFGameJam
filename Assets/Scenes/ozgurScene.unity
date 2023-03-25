@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 303507199}
   m_Layer: 0
   m_Name: NPCRight
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -727,9 +727,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 12583545}
-  highLighted: {fileID: 2335179631130862514, guid: 5ed7c6f219305f44e87805a3612bdfac, type: 3}
   tilemap: {fileID: 1973240238}
-  dirt: {fileID: 11400000, guid: efb341977b678ca48be5fbdd0d2bbb22, type: 2}
+  highlightedObject: {fileID: 0}
+  highlightedTile: {fileID: 0}
   mousePosition: {x: 0, y: 0}
   isSelected: 0
 --- !u!4 &1010637519
