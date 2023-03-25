@@ -16,6 +16,7 @@ TagManager:
   - Food
   - Health
   - CoinCount
+  - NPC
   layers:
   - Default
   - TransparentFX
