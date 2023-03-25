@@ -7,6 +7,14 @@ TagManager:
   - Ground
   - Wall
   - Ceiling
+  - PlayerPos
+  - Sword
+  - FoodCount
+  - HealthCount
+  - SwordCount
+  - Sun
+  - Food
+  - Health
   layers:
   - Default
   - TransparentFX
