@@ -171,7 +171,7 @@ MonoBehaviour:
   speed: 4
   jumpSpeed: 8
   rb: {fileID: 8720094068183373429}
-  col: {fileID: 0}
+  col: {fileID: 8720094068183373430}
   direction: 0
   canMoveRight: 0
   canMoveLeft: 0

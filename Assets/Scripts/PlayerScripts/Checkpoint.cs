@@ -35,7 +35,7 @@ public class Checkpoint : MonoBehaviour
     //checkpoint
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Respawn"))
+        if (other.CompareTag("Checkpoint"))
         {
             lastCheckpoint = other.transform.position;
         }

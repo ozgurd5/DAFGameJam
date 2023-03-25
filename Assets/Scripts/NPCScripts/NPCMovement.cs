@@ -21,12 +21,6 @@ public class NPCMovement : MonoBehaviour
     public RaycastHit2D rightCheckDown;
     public RaycastHit2D leftCheckDown;
 
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<Collider2D>();
-    }
-
     private void OnMouseDown()
     {
         selectedNPC[0] = rb;
