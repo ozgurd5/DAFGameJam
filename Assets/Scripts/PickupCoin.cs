@@ -29,7 +29,7 @@ public class PickupCoin : MonoBehaviour
             rend.enabled = false;
             col.enabled = false;
 
-            Destroy(gameObject,GetComponent<AudioSource>().clip.length);
+            Destroy(gameObject,pickupSound.clip.length);
         }
     }
 }

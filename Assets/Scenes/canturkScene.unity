@@ -999,6 +999,7 @@ GameObject:
   - component: {fileID: 301763977}
   - component: {fileID: 301763976}
   - component: {fileID: 301763975}
+  - component: {fileID: 301763978}
   m_Layer: 5
   m_Name: IncreaseMat_3
   m_TagString: Untagged
@@ -1070,9 +1071,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Cross
+      - m_Target: {fileID: 301763978}
+        m_TargetAssemblyTypeName: IncreaseMaterial, Assembly-CSharp
+        m_MethodName: increaseMaterial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1120,6 +1121,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301763973}
   m_CullTransparentMesh: 1
+--- !u!114 &301763978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301763973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75debbb261fc64514bdd481159600f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialCounter: {fileID: 1657345666}
+  coinCounter: {fileID: 608635982}
+  cost: 1
 --- !u!1 &314695936
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,7 +5018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
