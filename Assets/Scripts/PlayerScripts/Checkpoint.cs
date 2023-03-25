@@ -1,21 +1,19 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
     //assign
-    public GameObject playerFeet;
-    public List<GameObject> checkpointList = new List<GameObject>();
+    public GameObject feet;
 
     //variables
     public RaycastHit2D fallGroundCheck;
-    public GameObject lastCheckpoint;
+    public Vector2 lastCheckpoint;
     public bool isFalled;
 
     private void Update()
     {
         //fall ground check
-        fallGroundCheck = Physics2D.Raycast(playerFeet.transform.position, Vector2.down, 0.1f);
+        fallGroundCheck = Physics2D.Raycast(feet.transform.position, Vector2.down, 0.1f);
         if (fallGroundCheck.collider != null)
         {
             isFalled = fallGroundCheck.collider.CompareTag("FallGround");
@@ -29,20 +27,17 @@ public class Checkpoint : MonoBehaviour
         //teleport
         if (isFalled)
         {
-            transform.position = lastCheckpoint.transform.position;
+            transform.position = lastCheckpoint;
         }
         //teleport
     }
 
     //checkpoint
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (col.CompareTag("Checkpoint"))
+        if (other.CompareTag("Respawn"))
         {
-            if (checkpointList.IndexOf(col.gameObject) > checkpointList.IndexOf(lastCheckpoint))
-            {
-                lastCheckpoint = col.gameObject;
-            }
+            lastCheckpoint = other.transform.position;
         }
     }
     //checkpoint
