@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 222681896157911882}
   - component: {fileID: 114899707534844298}
   - component: {fileID: 114658108490135318}
-  - component: {fileID: 114111018961361520}
   m_Layer: 5
   m_Name: FoodButton
   m_TagString: Untagged
@@ -134,16 +133,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &114111018961361520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083639883097572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e0952744d973247824b8a41b1ae32b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 1604164073940054, guid: afbe2eac8642fd24dac6b49439344983, type: 3}

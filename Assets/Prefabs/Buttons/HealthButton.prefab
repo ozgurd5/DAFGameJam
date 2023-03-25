@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 222907314192324566}
   - component: {fileID: 114640722205517170}
   - component: {fileID: 114553636909404838}
-  - component: {fileID: 114270104809840408}
-  - component: {fileID: 114278462557158294}
   m_Layer: 5
   m_Name: HealthButton
   m_TagString: Untagged
@@ -123,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114278462557158294}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -135,30 +133,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &114270104809840408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950729669058624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e0952744d973247824b8a41b1ae32b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 1954627578700332, guid: c2551413c5ef80840a0a04a9177bb3a2, type: 3}
---- !u!114 &114278462557158294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950729669058624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ce64a6a0fc9eaa4a943a19ed0508bcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthEffect: {fileID: 1311468735239996, guid: 47942b79f7f67ea4bad815b5cfced9c2, type: 3}
-  healthBoost: 1
