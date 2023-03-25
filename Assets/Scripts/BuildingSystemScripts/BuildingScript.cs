@@ -30,6 +30,15 @@ public class BuildingScript : MonoBehaviour
         }
         else if (mousePosition.x < 0 && mousePosition.y > 0)
         {
+            tilePosition = new Vector2Int((int)mousePosition.x - 1, (int)mousePosition.y);
+        }
+        else if (mousePosition.x < 0 && mousePosition.y < 0)
+        {
+            tilePosition = new Vector2Int((int)mousePosition.x - 1, (int)mousePosition.y - 1);
+        }
+        else if (mousePosition.x > 0 && mousePosition.y < 0)
+        {
+            tilePosition = new Vector2Int((int)mousePosition.x, (int)mousePosition.y - 1);
         }
 
         if (Input.GetKeyDown(KeyCode.O))
@@ -44,7 +53,7 @@ public class BuildingScript : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                tilemap.SetTile(new Vector3Int(((int)mousePosition.x), ((int)mousePosition.y)), highlightedTile);
+                tilemap.SetTile(new Vector3Int((tilePosition.x), (tilePosition.y)), highlightedTile);
             }
             
             else if (Input.GetMouseButtonDown(1))
