@@ -21,12 +21,4 @@ public class Slot : MonoBehaviour {
         }
     }
 
-    public void Cross() {
-
-        foreach (Transform child in transform) {
-            child.GetComponent<Spawn>().SpawnItem();
-            GameObject.Destroy(child.gameObject);
-        }
-    }
-
 }
