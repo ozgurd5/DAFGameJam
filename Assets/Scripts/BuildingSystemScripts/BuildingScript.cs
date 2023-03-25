@@ -11,6 +11,7 @@ public class BuildingScript : MonoBehaviour
 
     [Header("Variables - Don't Touch")]
     public Vector2 mousePosition;
+    public Vector2Int tilePosition;
     public bool isSelected;
     public static GameObject[] selectedObject = new GameObject[1]; 
     
@@ -23,6 +24,13 @@ public class BuildingScript : MonoBehaviour
     private void Update()
     {
         mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        if (mousePosition.x > 0 && mousePosition.y > 0)
+        {
+            tilePosition = new Vector2Int((int)mousePosition.x, (int)mousePosition.y);
+        }
+        else if (mousePosition.x < 0 && mousePosition.y > 0)
+        {
+        }
 
         if (Input.GetKeyDown(KeyCode.O))
         {
@@ -32,11 +40,11 @@ public class BuildingScript : MonoBehaviour
         
         if (isSelected)
         {
-            selectedObject[0].transform.position = new Vector3(((int)mousePosition.x - 0.5f), ((int)mousePosition.y) + 0.5f);
+            selectedObject[0].transform.position = new Vector3(tilePosition.x + 0.5f, tilePosition.y + 0.5f);
 
             if (Input.GetMouseButtonDown(0))
             {
-                tilemap.SetTile(new Vector3Int(((int)mousePosition.x - 1), ((int)mousePosition.y)), highlightedTile);
+                tilemap.SetTile(new Vector3Int(((int)mousePosition.x), ((int)mousePosition.y)), highlightedTile);
             }
             
             else if (Input.GetMouseButtonDown(1))
