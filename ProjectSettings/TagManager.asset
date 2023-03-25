@@ -15,6 +15,7 @@ TagManager:
   - Sun
   - Food
   - Health
+  - CoinCount
   layers:
   - Default
   - TransparentFX
