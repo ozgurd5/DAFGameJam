@@ -201,6 +201,7 @@ MonoBehaviour:
   right: {fileID: 8720094069202303730}
   left: {fileID: 8720094068627466907}
   state: {fileID: 8720094068183373428}
+  isCompletedScript: {fileID: 0}
   speed: 4
   jumpSpeed: 8
   rb: {fileID: 8720094068183373429}
@@ -208,6 +209,7 @@ MonoBehaviour:
   direction: 0
   canMoveRight: 0
   canMoveLeft: 0
+  isCompleted: 0
 --- !u!114 &8673816339000490306
 MonoBehaviour:
   m_ObjectHideFlags: 0

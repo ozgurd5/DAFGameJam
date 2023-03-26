@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class NPCMovement : MonoBehaviour
@@ -6,6 +7,7 @@ public class NPCMovement : MonoBehaviour
     public GameObject right;
     public GameObject left;
     public NPCState state;
+    public CompletedNPC isCompletedScript;
     public float speed;
     public float jumpSpeed;
 
@@ -20,10 +22,20 @@ public class NPCMovement : MonoBehaviour
     public RaycastHit2D leftCheck;
     public RaycastHit2D rightCheckDown;
     public RaycastHit2D leftCheckDown;
+    public bool isCompleted;
 
     private void OnMouseDown()
     {
         selectedNPC[0] = rb;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Hospital") && !isCompleted)
+        {
+            isCompleted = true;
+            isCompletedScript.completedNPCNumber++;
+        }
     }
 
     private void Update()
