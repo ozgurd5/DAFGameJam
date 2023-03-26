@@ -76,7 +76,7 @@ public class BuildingScript : MonoBehaviour
     private void Update()
     {
         //player tile position calculation
-        /*if (player.transform.position.x > 0 && player.transform.position.y > 0)
+        if (player.transform.position.x > 0 && player.transform.position.y > 0)
         {
             playerTilePosition = new Vector2Int((int)player.transform.position.x, (int)player.transform.position.y);
         }
@@ -91,7 +91,7 @@ public class BuildingScript : MonoBehaviour
         else if (player.transform.position.x > 0 && player.transform.position.y < 0)
         {
             playerTilePosition = new Vector2Int((int)player.transform.position.x, (int)player.transform.position.y - 1);
-        }*/
+        }
         //player tile position calculation
         
         //mouse tile position calculation
@@ -115,14 +115,14 @@ public class BuildingScript : MonoBehaviour
         //mouse tile position calculation
         
         //player tile to mouse tile - distance calculation
-        // if (math.abs(playerTilePosition.x - mouseTilePosition.x) <= 4f && math.abs(playerTilePosition.y - mouseTilePosition.y) <= 4f)
-        // {
-        //     isSuitable = true;
-        // }
-        // else
-        // {
-        //     isSuitable = false;
-        // }
+        if (math.abs(playerTilePosition.x - mouseTilePosition.x) <= 4000f && math.abs(playerTilePosition.y - mouseTilePosition.y) <= 4000f)
+        {
+            isSuitable = true;
+        }
+        else
+        {
+            isSuitable = false;
+        }
         //player tile to mouse tile - distance calculation
 
         //test
