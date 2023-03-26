@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fb20b40-5933-4348-8b9c-42bc5a989039" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buttons/FoodButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buttons/FoodButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buttons/HealthButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buttons/HealthButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buttons/SwordButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buttons/SwordButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/canturkScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/canturkScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupCoin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupCoin.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -24,7 +24,7 @@ public class PickupCoin : MonoBehaviour
     {
         if (other.CompareTag("Player")) {
             coinCount = int.Parse(coinCounter.text);
-            coinCounter.text = (coinCount + 1).ToString();
+            coinCounter.text = (coinCount + 10).ToString();
             pickupSound.Play();
             rend.enabled = false;
             col.enabled = false;
