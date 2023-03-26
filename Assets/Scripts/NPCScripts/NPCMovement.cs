@@ -1,10 +1,8 @@
-using System;
 using UnityEngine;
 
 public class NPCMovement : MonoBehaviour
 {
     [Header("Assign")]
-    public Rigidbody2D rb;
     public GameObject right;
     public GameObject left;
     public NPCState state;
@@ -12,56 +10,74 @@ public class NPCMovement : MonoBehaviour
     public float jumpSpeed;
 
     [Header("Variables - Don't Touch")]
+    public static Rigidbody2D[] selectedNPC = new Rigidbody2D[1];
+    public Rigidbody2D rb;
+    public Collider2D col;
     public int direction;
-    public RaycastHit2D wallCheckRight;
-    public RaycastHit2D wallCheckLeft;
-    public RaycastHit2D groundCheckRight;
-    public RaycastHit2D groundCheckLeft;
+    public bool canMoveRight;
+    public bool canMoveLeft;
+    public RaycastHit2D rightCheck;
+    public RaycastHit2D leftCheck;
+    public RaycastHit2D rightCheckDown;
+    public RaycastHit2D leftCheckDown;
+
+    private void OnMouseDown()
+    {
+        selectedNPC[0] = rb;
+    }
 
     private void Update()
     {
-        //direction
-        if (Input.GetKeyDown(KeyCode.J)) //go left
+        //controls
+        if (rb == selectedNPC[0])
         {
-            rb.velocity = new Vector2(-1 * speed, 0f);
-            direction = -1;
-            
-            state.isMoving = true;
-            state.isIdle = false;
+            if (Input.GetKeyDown(KeyCode.J) && canMoveLeft) //go left
+            {
+                direction = -1;
+
+                state.isMoving = true;
+                state.isIdle = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.L) && canMoveRight) //go right
+            {
+                direction = 1;
+
+                state.isMoving = true;
+                state.isIdle = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.K)) //stop
+            {
+                state.isMoving = false;
+                state.isIdle = true;
+            }
         }
-        
-        else if (Input.GetKeyDown(KeyCode.L)) //go right
+        //controls
+
+        //movement
+        if (direction == 1 && !canMoveRight)
         {
-            rb.velocity = new Vector2(speed, 0f);
-            direction = 1;
-            
-            state.isMoving = true;
-            state.isIdle = false;
-        }
-        
-        else if (Input.GetKeyDown(KeyCode.K)) //stop
-        {
-            rb.velocity = new Vector2(0f, 0f);
-            
             state.isMoving = false;
             state.isIdle = true;
         }
-        //direction
-
-        //wall check
-        wallCheckRight = Physics2D.Raycast(right.transform.position, Vector2.right, 0.05f);
-        wallCheckLeft = Physics2D.Raycast(left.transform.position, Vector2.left, 0.05f);
+        if (direction == -1 && !canMoveLeft)
+        {
+            state.isMoving = false;
+            state.isIdle = true;
+        }
+        //movement
         
-        if (wallCheckRight.collider != null)
+        //movement
+        if (state.isMoving)
         {
-            state.isJumping = wallCheckRight.collider.CompareTag("Ground");
+            rb.velocity = new Vector2(direction * speed, rb.velocity.y);
         }
-        if (wallCheckLeft.collider != null)
-        {
-            state.isJumping = wallCheckLeft.collider.CompareTag("Ground");
-        }
-        //wall check
 
+        if (state.isIdle)
+        {
+            rb.velocity = new Vector2(0f, rb.velocity.y);
+        }
+        //movement
+        
         //jump
         if (state.isJumping)
         {
@@ -69,11 +85,59 @@ public class NPCMovement : MonoBehaviour
             Invoke(nameof(JumpEnder), 0.15f);
         }
         //jump
+
+        //ground check
+        rightCheckDown = Physics2D.Raycast(right.transform.position, Vector2.down, 2.55f);
+        leftCheckDown = Physics2D.Raycast(left.transform.position, Vector2.down, 2.55f);
+        
+        if (rightCheckDown.collider != null)
+        {
+            canMoveRight = rightCheckDown.collider.CompareTag("Ground") || rightCheckDown.collider.CompareTag("Checkpoint");
+        }
+        else
+        {
+            canMoveRight = false;
+        }
+        if (leftCheckDown.collider != null)
+        {
+            canMoveLeft = leftCheckDown.collider.CompareTag("Ground") || leftCheckDown.collider.CompareTag("Checkpoint");
+        }
+        else
+        {
+            canMoveLeft = false;
+        }
+        //ground check
+        
+        //right-left check
+        rightCheck = Physics2D.Raycast(right.transform.position, Vector2.right, 0.05f);
+        leftCheck = Physics2D.Raycast(left.transform.position, Vector2.left, 0.05f);
+    
+        if (rightCheck.collider != null)
+        {
+            state.isJumping = rightCheck.collider.CompareTag("Ground");
+            
+            if (rightCheck.collider.CompareTag("Player") || rightCheck.collider.CompareTag("NPC"))
+            {
+                Physics2D.IgnoreCollision(rightCheck.collider, col);
+                canMoveRight = false;
+            }
+        }
+        if (leftCheck.collider != null)
+        {
+            state.isJumping = leftCheck.collider.CompareTag("Ground");
+
+            if (leftCheck.collider.CompareTag("Player") || leftCheck.collider.CompareTag("NPC"))
+            {
+                Physics2D.IgnoreCollision(leftCheck.collider, col);
+                canMoveLeft = false;
+            }
+        }
+        //right-left  check
     }
 
     public void JumpEnder()
     {
-        rb.velocity = new Vector2(rb.velocity.x, 0f);
+        selectedNPC[0].velocity = new Vector2(selectedNPC[0].velocity.x, 0f);
         state.isJumping = false;
     }
 }

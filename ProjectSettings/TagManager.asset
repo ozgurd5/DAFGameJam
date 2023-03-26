@@ -17,6 +17,16 @@ TagManager:
   - Health
   - CoinCount
   - NPC
+  - Health
+  - Food
+  - Sword
+  - Sun
+  - PlayerPos
+  - FoodCount
+  - HealthCount
+  - SwordCount
+  - FallGround
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

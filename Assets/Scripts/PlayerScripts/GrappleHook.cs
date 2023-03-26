@@ -4,7 +4,7 @@ public class GrappleHook : MonoBehaviour
 {
     //assign
     public PlayerState state;
-    public Camera camera;
+    public Camera cam;
     public GameObject top;
     public LineRenderer lineRenderer;
     public DistanceJoint2D distanceJoint;
@@ -20,7 +20,7 @@ public class GrappleHook : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
             ceilingCheck = Physics2D.Linecast(top.transform.position, mousePosition);
             if (ceilingCheck.collider != null)
             {
