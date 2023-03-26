@@ -28,7 +28,7 @@ public class PlayerControl : MonoBehaviour
     public float jumpBufferLimit = 0.1f;
 
     //double jump variable
-    public int extraJumpCounter = 1;
+    public static int extraJumpCounter = 1;
     
     //wall jump variable
     public float jumpDirection;
