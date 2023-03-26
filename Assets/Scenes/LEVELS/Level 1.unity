@@ -1527,6 +1527,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5821356470904365220, guid: 9d2508c75fc6aa54a96aeba0109a76af, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2ee52327fc9db4e6aa36278d8c568a8f, type: 2}
     - target: {fileID: 8720094068183373432, guid: 9d2508c75fc6aa54a96aeba0109a76af, type: 3}
       propertyPath: m_Name
       value: NPC
@@ -16167,6 +16171,14 @@ PrefabInstance:
     - target: {fileID: 554574551786182819, guid: e2f662e0c3dc4f1419762f00f44c947c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878189219452754119, guid: e2f662e0c3dc4f1419762f00f44c947c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 80560928}
+    - target: {fileID: 3878189219452754119, guid: e2f662e0c3dc4f1419762f00f44c947c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickSteel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f662e0c3dc4f1419762f00f44c947c, type: 3}
