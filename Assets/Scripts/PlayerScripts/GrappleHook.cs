@@ -15,7 +15,7 @@ public class GrappleHook : MonoBehaviour
     public bool isCeiling;
     public Vector2 mousePosition;
     public RaycastHit2D ceilingCheck;
-    
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -32,7 +32,7 @@ public class GrappleHook : MonoBehaviour
                 isCeiling = false;
             }
         }
-        
+
         else if (Input.GetMouseButtonUp(0))
         {
             distanceJoint.enabled = false;
@@ -40,14 +40,14 @@ public class GrappleHook : MonoBehaviour
             state.isGrappled = false;
             isCeiling = false;
         }
-        
+
         if (isCeiling)
         {
-            distanceJoint.connectedAnchor = ceilingCheck.transform.position;
+            distanceJoint.connectedAnchor = ceilingCheck.collider.bounds.center;
             distanceJoint.enabled = true;
-            
-            lineRenderer.SetPosition(1,transform.position);
-            lineRenderer.SetPosition(0, ceilingCheck.transform.position);
+
+            lineRenderer.SetPosition(1, transform.position);
+            lineRenderer.SetPosition(0, ceilingCheck.collider.bounds.center);
             lineRenderer.enabled = true;
         }
 
