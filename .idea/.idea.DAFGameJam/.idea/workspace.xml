@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fb20b40-5933-4348-8b9c-42bc5a989039" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DAFGameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DAFGameJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Checkpoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Checkpoint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ozgurScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ozgurScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystemScripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystemScripts/BuildingScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystemScripts/BuildingScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buttons/FoodButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buttons/FoodButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buttons/HealthButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buttons/HealthButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buttons/SwordButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buttons/SwordButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/canturkScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/canturkScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +16,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapScripts/DisasterController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPCScripts/NPCState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Checkpoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScripts/PlayerState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponItem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -98,6 +97,7 @@
       <workItem from="1679683367613" duration="1823000" />
       <workItem from="1679694947775" duration="5354000" />
       <workItem from="1679768593946" duration="22547000" />
+      <workItem from="1679818347474" duration="1339000" />
     </task>
     <servers />
   </component>

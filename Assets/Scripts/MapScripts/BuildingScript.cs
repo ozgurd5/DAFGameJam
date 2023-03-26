@@ -25,7 +25,7 @@ public class BuildingScript : MonoBehaviour
 
     [Header("Variables - Don't Touch")]
     public bool isDestroying;
-    public bool isSuitable;
+    public bool isSuitable = true; //change if range is used
     public bool isSelected;
     public Tile selectedTile;
     public Tilemap selectedTilemap;
@@ -76,7 +76,7 @@ public class BuildingScript : MonoBehaviour
     private void Update()
     {
         //player tile position calculation
-        if (player.transform.position.x > 0 && player.transform.position.y > 0)
+        /*if (player.transform.position.x > 0 && player.transform.position.y > 0)
         {
             playerTilePosition = new Vector2Int((int)player.transform.position.x, (int)player.transform.position.y);
         }
@@ -91,7 +91,7 @@ public class BuildingScript : MonoBehaviour
         else if (player.transform.position.x > 0 && player.transform.position.y < 0)
         {
             playerTilePosition = new Vector2Int((int)player.transform.position.x, (int)player.transform.position.y - 1);
-        }
+        }*/
         //player tile position calculation
         
         //mouse tile position calculation
@@ -115,14 +115,14 @@ public class BuildingScript : MonoBehaviour
         //mouse tile position calculation
         
         //player tile to mouse tile - distance calculation
-        if (math.abs(playerTilePosition.x - mouseTilePosition.x) <= 4f && math.abs(playerTilePosition.y - mouseTilePosition.y) <= 4f)
-        {
-            isSuitable = true;
-        }
-        else
-        {
-            isSuitable = false;
-        }
+        // if (math.abs(playerTilePosition.x - mouseTilePosition.x) <= 4f && math.abs(playerTilePosition.y - mouseTilePosition.y) <= 4f)
+        // {
+        //     isSuitable = true;
+        // }
+        // else
+        // {
+        //     isSuitable = false;
+        // }
         //player tile to mouse tile - distance calculation
 
         //test
@@ -164,16 +164,16 @@ public class BuildingScript : MonoBehaviour
             }
         }
         
-        else if (isDestroying && isSuitable)
+        /*else if (isDestroying && isSuitable)
         {
             selectedObject.transform.position = new Vector3(mouseTilePosition.x + 0.5f, mouseTilePosition.y + 0.5f);
             
             if (Input.GetMouseButtonDown(0))
             {
                 dirtTilemap.SetTile(new Vector3Int((mouseTilePosition.x), (mouseTilePosition.y)), null);
-                //woodTilemap.SetTile(new Vector3Int((tilePosition.x), (tilePosition.y)), null);
-                //concreteTilemap.SetTile(new Vector3Int((tilePosition.x), (tilePosition.y)), null);
-                //steelTilemap.SetTile(new Vector3Int((tilePosition.x), (tilePosition.y)), null);
+                woodTilemap.SetTile(new Vector3Int((mouseTilePosition.x), (mouseTilePosition.y)), null);
+                concreteTilemap.SetTile(new Vector3Int((mouseTilePosition.x), (mouseTilePosition.y)), null);
+                steelTilemap.SetTile(new Vector3Int((mouseTilePosition.x), (mouseTilePosition.y)), null);
             }
             
             else if (Input.GetMouseButtonDown(1))
@@ -181,6 +181,6 @@ public class BuildingScript : MonoBehaviour
                 Destroy(selectedObject);
                 isDestroying = false;
             }
-        }
+        }*/
     }
 }
