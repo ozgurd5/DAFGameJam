@@ -14181,7 +14181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879bd4bb83dd3a54a990a8d9b78a92b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1055235892}
   newPosition: {x: 0, y: 0, z: 0}
   cameraDelay: 5
 --- !u!81 &1281781951
@@ -19489,7 +19489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8555ba738ec8746ace614e246a034a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1281781949}
   player: {fileID: 1055235892}
   dirtTilemap: {fileID: 1159159261}
   woodTilemap: {fileID: 1847492608}
