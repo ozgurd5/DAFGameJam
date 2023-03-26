@@ -17488,6 +17488,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3878189219452754119, guid: e2f662e0c3dc4f1419762f00f44c947c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 815879205}
+    - target: {fileID: 3878189219452754119, guid: e2f662e0c3dc4f1419762f00f44c947c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickSteel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f662e0c3dc4f1419762f00f44c947c, type: 3}
 --- !u!1 &914914095 stripped
