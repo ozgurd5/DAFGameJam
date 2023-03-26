@@ -126,14 +126,14 @@ public class BuildingScript : MonoBehaviour
         //player tile to mouse tile - distance calculation
 
         //test
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            ClickDirt();
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            ClickDestroy();
-        }
+        // if (Input.GetKeyDown(KeyCode.O))
+        // {
+        //     ClickDirt();
+        // }
+        // if (Input.GetKeyDown(KeyCode.P))
+        // {
+        //     ClickDestroy();
+        // }
         //test
 
         if (isSelected)
