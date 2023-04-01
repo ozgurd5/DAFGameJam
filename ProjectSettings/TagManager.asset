@@ -36,7 +36,7 @@ TagManager:
   - Water
   - UI
   - GrapplePoint
-  - 
+  - SpikeLayer
   - 
   - 
   - 
@@ -67,6 +67,7 @@ TagManager:
     locked: 0
   - name: layer1
     uniqueID: 3303457745
+    locked: 0
   - name: frontPlayer
     uniqueID: 2013009745
     locked: 0
